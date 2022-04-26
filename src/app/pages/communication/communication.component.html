@@ -4,9 +4,9 @@
 -->
 
 <h2>Passer des données du parent vers l'enfant</h2>
-<app-user-card [user_input]="user_data" ></app-user-card>
-<app-user-card [user_input]="{id: 2, nom: 'Jean Michel', email: 'jmichel@mail.fr'}" ></app-user-card>
-<app-user-card></app-user-card>
+<app-user-card [show_delete]="false" [user_input]="user_data" ></app-user-card>
+<app-user-card [show_delete]="false" [user_input]="{id: 2, nom: 'Jean Michel', email: 'jmichel@mail.fr'}" ></app-user-card>
+<app-user-card [show_delete]="false"></app-user-card>
 
 <h2>Communiquer de l'enfant vers le parent</h2>
 <app-user-card (message_event)="handleMessage($event)" *ngFor="let u of users_list" [user_input]="u"></app-user-card>

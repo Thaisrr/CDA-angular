@@ -26,5 +26,6 @@ export class CommunicationComponent {
   handleMessage(event: string) {
     console.warn(event)
   }
+  
 
 }

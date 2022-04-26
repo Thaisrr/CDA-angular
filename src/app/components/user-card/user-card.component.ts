@@ -8,6 +8,7 @@ import {User} from "../../utils/models/user";
 })
 export class UserCardComponent  {
 
+  @Input() show_delete: boolean = true;
   @Input() user_input? : User;
   //        nom de l'événement      <type de sortie>
   @Output() message_event = new EventEmitter<string>();

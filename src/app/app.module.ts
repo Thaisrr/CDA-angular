@@ -8,6 +8,8 @@ import { CommunicationComponent } from './pages/communication/communication.comp
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
+import { ManagerComponent } from './pages/manager/manager.component';
+import { EmployeeComponent } from './components/employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UserCardComponent } from './components/user-card/user-card.component';
     CommunicationComponent,
     PageNotFoundComponent,
     NavigationComponent,
-    UserCardComponent
+    UserCardComponent,
+    ManagerComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

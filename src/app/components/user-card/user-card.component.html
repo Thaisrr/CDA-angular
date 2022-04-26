@@ -2,7 +2,7 @@
   <div *ngIf="user_input; else noUser" [id]="user_input.id">
     <h3>{{user_input.nom}}</h3>
     <p>{{user_input.email}}</p>
-    <p>
+    <p *ngIf="show_delete">
       <button (click)="sendMessage()">Message</button>
     </p>
   </div>

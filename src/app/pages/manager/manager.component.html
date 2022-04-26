@@ -1,0 +1,18 @@
+<main>
+
+  <h1>Manager Office</h1>
+  <p>Appels gérés : {{ calls_answered }}</p>
+
+  <div class="grid">
+    <div class="case">
+        <h2>On répond : </h2>
+      <app-employee [employee]="'Toto'" (call_event)="handleCall($event)"></app-employee>
+      <app-employee [employee]="'Tata'" (call_event)="handleCall($event)"></app-employee>
+    </div>
+    <div class="case">
+        <h2>J'aime pas ces employés, je rep pas !</h2>
+      <app-employee></app-employee>
+    </div>
+  </div>
+
+</main>
