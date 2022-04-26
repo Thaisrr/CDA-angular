@@ -1,0 +1,7 @@
+<h1>Communication en les composants</h1>
+<!-- [nom de l'input déclaré dans le composant enfant ]
+= " nom de la variable dans ce composant ( parent
+-->
+<app-user-card [user_input]="user_data" ></app-user-card>
+<app-user-card [user_input]="{nom: 'Jean Michel', email: 'jmichel@mail.fr'}" ></app-user-card>
+<app-user-card></app-user-card>
