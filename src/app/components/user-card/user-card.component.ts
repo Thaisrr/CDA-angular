@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {User} from "../../utils/models/user";
 
 @Component({
@@ -9,8 +9,14 @@ import {User} from "../../utils/models/user";
 export class UserCardComponent  {
 
   @Input() user_input? : User;
+  //        nom de l'événement      <type de sortie>
+  @Output() message_event = new EventEmitter<string>();
 
   constructor() { }
+
+  sendMessage() {
+    this.message_event.emit('Hello from User Card !')
+  }
 
 
 }
