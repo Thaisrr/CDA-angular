@@ -1,0 +1,37 @@
+<main>
+  <h1>Reactive Forms</h1>
+
+  <form (ngSubmit)="submitTitle()">
+    <label for="book_title">Titre</label>
+    <input [formControl]="book_title_control" id="book_title" >
+    <button type="submit">Save</button>
+  </form>
+  <p>Mon livre : {{ favorite }}</p>
+
+
+  <fieldset>
+    <legend>Book</legend>
+
+    <form [formGroup]="book_group" (ngSubmit)="submitBook()">
+      <div>
+        <label for="title">Titre</label>
+        <input aria-required="true"  id="title" formControlName="title">
+        <p
+          *ngIf="hasError('title')"
+          class="error">Un titre est requis !</p>
+      </div>
+      <div>
+        <label for="author">Auteur.trice</label>
+        <input id="author" formControlName="author">
+      </div>
+
+      <button [disabled]="!book_group.valid" type="submit">Enregistrer</button>
+    </form>
+  </fieldset>
+
+
+  <p>
+    <label>Test Interaction: </label>
+    <input class="etat" [formControl]="test">
+  </p>
+</main>

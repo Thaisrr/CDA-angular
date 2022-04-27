@@ -1,0 +1,30 @@
+input.ng-touched.ng-invalid {
+  background-color: darksalmon;
+}
+
+input.ng-valid {
+  background-color: aquamarine;
+}
+
+/*
+ng-touched : l'input a déjà perdu le focus
+ng-untouched : l'input n'a jamais perdu le focus
+
+ng-pristine : l'input n'a jamais reçu d'interaction
+ng-dirty : l'input a déjà reçu une interaction
+ */
+
+
+.etat.ng-pristine {
+  background-color: blueviolet;
+}
+.etat.ng-dirty {
+  background-color: darkgoldenrod;
+}
+
+.etat.ng-touched {
+  border: solid 5px blue;
+}
+.etat.ng-untouched {
+  border: solid 5px green;
+}

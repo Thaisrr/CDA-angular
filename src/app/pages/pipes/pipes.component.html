@@ -1,0 +1,56 @@
+<main>
+  <h1>Les Pipes</h1>
+
+  <h2>Texte</h2>
+  <p>Mon titre : {{ title }}</p>
+  <p>Mon titre en majuscules : {{ title |  uppercase}}</p>
+  <p>Mon titre en minuscules : {{ title | lowercase }}</p>
+  <p>Mon titre mais bien affiché {{ title | titlecase }}</p>
+
+  <h2>Dates</h2>
+  <p>Date : {{today | date}}</p>
+  <!-- mots clefs : short, medium, long, full -->
+  <p>Short : {{today | date: 'short'}}</p>
+  <p>Format Personnalisé : {{today | date : 'd/M/yyyy'}}</p>
+  <p>Heure US : {{today | date: 'h:mm:ss a'}}</p> <!-- 0 -> 12 -->
+  <p>Heure EU: {{today | date: 'H:mm'}}</p> <!-- 1:30  -> 23-->
+  <p>Heure EU (bis): {{today | date: 'HH:mm'}}</p> <!-- 01:30 -> 23-->
+  <p>Mois ( 1 -> 12 ): {{ today | date: 'M'}}</p>
+  <p>Mois (01 -> 12 ) : {{ today | date: 'MM'}}</p>
+  <p>Mois ( abréviation ) : {{ today | date: 'MMM'}}</p>
+  <p>Mois ( complet ): {{ today | date: 'MMMM'}}</p>
+  <p>Jour ( mois ) : {{ today | date: 'd'}}</p> <!-- jour dans le mois -->
+  <p>Jour ( mois ): {{ today | date: 'dd'}}</p>
+  <p>Jour ( semaine ) : {{ today | date: 'c' }}</p>
+  <p>Jour ( semaine ) : {{ today | date: 'ccc' }}</p>
+  <p>Jour ( semaine ) : {{ today | date: 'cccc' }}</p>
+
+  <h2>Numbers</h2>
+  <p>PI : {{ PI }}</p>
+  <p>PI : {{ PI | number }}</p>
+  <!--
+  nombre mini de chiffres AVANT la virgule
+  .
+  nombre mini de chiffres APRES la virgule
+  -
+  nombre maxi de chiffres après la virgule
+  -->
+  <p>PI : {{ PI | number : '1.1-1'}}</p>
+  <p>PI : {{ PI | number : '2.1-1'}}</p>
+  <p>PI : {{ PI | number : '2.1-5'}}</p>
+  <p> 5 : {{ 5 | number : '2.2-5'}}</p>
+  <p> 5 : {{ 5 | number : '2.2-5'}}</p>
+
+  <h2>Pipe personnalisé : </h2>
+  <p>{{title | rainbow | titlecase}}</p>
+</main>
+
+<!--
+camelCase
+PascalCase
+kebab-case
+snake_case
+lowercase
+UPPERCASE
+Title Case
+-->

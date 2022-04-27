@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,15 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { ManagerComponent } from './pages/manager/manager.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { PipesComponent } from './pages/pipes/pipes.component';
+import {registerLocaleData} from "@angular/common";
+import localeFr from "@angular/common/locales/fr";
+import { RainbowPipe } from './utils/pipes/rainbow.pipe';
+import { FormulairesComponent } from './pages/formulaires/formulaires.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormulairesReactiveComponent } from './pages/formulaires-reactive/formulaires-reactive.component';
+
+registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [
@@ -20,13 +29,19 @@ import { EmployeeComponent } from './components/employee/employee.component';
     NavigationComponent,
     UserCardComponent,
     ManagerComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    PipesComponent,
+    RainbowPipe,
+    FormulairesComponent,
+    FormulairesReactiveComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'fr-FR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

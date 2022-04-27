@@ -1,0 +1,39 @@
+<main>
+  <h1>Les formulaires</h1>
+
+  <h2>1. NgModel</h2>
+
+  <p>
+    <label for="search">Rechercher :</label>
+    <input id="search" [(ngModel)]="search_str">
+  </p>
+  <p>Vous avez recherché : {{search_str}}</p>
+
+  <fieldset>
+    <legend>Inscription</legend>
+
+    <form (ngSubmit)="saveUser()">
+      <!-- Dans un formulaire, les inputs utilisant ngModel
+      doivent avoir un "name"
+      -->
+      <p>
+        <label for="nom">Nom</label>
+        <input [(ngModel)]="user.nom" name="nom" id="nom">
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input [(ngModel)]="user.email" name="email" id="email">
+      </p>
+      <p>
+        <button type="submit">Valider</button>
+      </p>
+    </form>
+  </fieldset>
+
+  <ul *ngIf="saved_user">Mon utilisateur(trice)
+    <li>Nom : {{saved_user.nom}} </li>
+    <li>Email : {{saved_user.email}} </li>
+  </ul>
+
+
+</main>
