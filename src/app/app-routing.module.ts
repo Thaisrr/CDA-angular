@@ -7,6 +7,7 @@ import {ManagerComponent} from "./pages/manager/manager.component";
 import {PipesComponent} from "./pages/pipes/pipes.component";
 import {FormulairesComponent} from "./pages/formulaires/formulaires.component";
 import {FormulairesReactiveComponent} from "./pages/formulaires-reactive/formulaires-reactive.component";
+import {ObservableComponent} from "./pages/observable/observable.component";
 
 const routes: Routes = [
   {path: 'accueil', component: PresentationComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'pipes', component: PipesComponent},
   {path: 'form', component: FormulairesComponent},
   {path: 'reactive-form', component: FormulairesReactiveComponent},
+  {path: 'observables', component: ObservableComponent},
   {path: 'acceuil', redirectTo: 'accueil'},
   {path: '', redirectTo: '/accueil', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},

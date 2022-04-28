@@ -17,6 +17,7 @@ import { RainbowPipe } from './utils/pipes/rainbow.pipe';
 import { FormulairesComponent } from './pages/formulaires/formulaires.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FormulairesReactiveComponent } from './pages/formulaires-reactive/formulaires-reactive.component';
+import { ObservableComponent } from './pages/observable/observable.component';
 
 registerLocaleData(localeFr);
 
@@ -33,7 +34,8 @@ registerLocaleData(localeFr);
     PipesComponent,
     RainbowPipe,
     FormulairesComponent,
-    FormulairesReactiveComponent
+    FormulairesReactiveComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
