@@ -1,0 +1,12 @@
+.card {
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px darkgrey;
+  padding: 20px;
+  width: 25%;
+  margin: 30px auto;
+  transition: .3s;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 9px darkgrey;
+}

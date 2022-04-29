@@ -1,0 +1,15 @@
+<main>
+  <h1>Exemple de CRUD</h1>
+
+  <app-post-form
+    (on_create)="getPosts()"
+  ></app-post-form>
+
+  <div class="grid">
+    <app-post-card
+      *ngFor="let p of posts"
+      [post]="p"
+      (on_delete)="getPosts()"
+    ></app-post-card>
+  </div>
+</main>

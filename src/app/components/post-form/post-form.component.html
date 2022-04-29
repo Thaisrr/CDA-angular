@@ -1,0 +1,7 @@
+<form (ngSubmit)="save()" [formGroup]="post_group">
+  <p>
+    <label for="txt">Texte</label>
+    <input id="txt" formControlName="text">
+    <button type="submit">Save</button>
+  </p>
+</form>

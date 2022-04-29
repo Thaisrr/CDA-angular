@@ -9,6 +9,8 @@ import {FormulairesComponent} from "./pages/formulaires/formulaires.component";
 import {FormulairesReactiveComponent} from "./pages/formulaires-reactive/formulaires-reactive.component";
 import {ObservableComponent} from "./pages/observable/observable.component";
 import {HttpComponent} from "./pages/http/http.component";
+import {CrudComponent} from "./pages/crud/crud.component";
+import {AuthenticationComponent} from "./pages/authentication/authentication.component";
 
 const routes: Routes = [
   {path: 'accueil', component: PresentationComponent},
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path: 'reactive-form', component: FormulairesReactiveComponent},
   {path: 'observables', component: ObservableComponent},
   {path: 'http', component: HttpComponent},
+  {path: 'crud', component: CrudComponent},
+  {path: 'auth', component: AuthenticationComponent},
   {path: 'acceuil', redirectTo: 'accueil'},
   {path: '', redirectTo: '/accueil', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},

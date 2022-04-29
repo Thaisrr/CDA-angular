@@ -1,0 +1,38 @@
+<main>
+  <h1>Authentication</h1>
+
+  <h2>Inscription : </h2>
+  <form [formGroup]="sign_group" (ngSubmit)="register()">
+    <p>
+      <label for="email">Email</label>
+      <input formControlName="email" type="email" id="email">
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <input formControlName="password" type="password" id="password">
+    </p>
+    <p>
+      <button type="submit">S'inscrire</button>
+    </p>
+  </form>
+
+  <h2>Connexion</h2>
+
+  <form (ngSubmit)="login()" *ngIf="!isLogged; else not">
+    <p>
+      <label for="email_log">Email</label>
+      <input name="email" [(ngModel)]="login_user.email" type="email" id="email_log">
+    </p>
+    <p>
+      <label for="password_log">Password</label>
+      <input name="password" [(ngModel)]="login_user.password" type="password" id="password_log">
+    </p>
+    <p>
+      <button type="submit">S'inscrire</button>
+    </p>
+  </form>
+
+  <ng-template #not>
+    <button (click)="logout()">Déconnexion</button>
+  </ng-template>
+</main>

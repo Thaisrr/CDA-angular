@@ -20,6 +20,10 @@ import { FormulairesReactiveComponent } from './pages/formulaires-reactive/formu
 import { ObservableComponent } from './pages/observable/observable.component';
 import { HttpComponent } from './pages/http/http.component';
 import {HttpClientModule} from "@angular/common/http";
+import { CrudComponent } from './pages/crud/crud.component';
+import { PostCardComponent } from './components/post-card/post-card.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
+import { AuthenticationComponent } from './pages/authentication/authentication.component';
 
 registerLocaleData(localeFr);
 
@@ -38,7 +42,11 @@ registerLocaleData(localeFr);
     FormulairesComponent,
     FormulairesReactiveComponent,
     ObservableComponent,
-    HttpComponent
+    HttpComponent,
+    CrudComponent,
+    PostCardComponent,
+    PostFormComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
