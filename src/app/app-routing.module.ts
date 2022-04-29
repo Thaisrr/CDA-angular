@@ -11,6 +11,8 @@ import {ObservableComponent} from "./pages/observable/observable.component";
 import {HttpComponent} from "./pages/http/http.component";
 import {CrudComponent} from "./pages/crud/crud.component";
 import {AuthenticationComponent} from "./pages/authentication/authentication.component";
+import {SecretComponent} from "./pages/secret/secret.component";
+import {UserGuard} from "./utils/guard/user.guard";
 
 const routes: Routes = [
   {path: 'accueil', component: PresentationComponent},
@@ -23,6 +25,7 @@ const routes: Routes = [
   {path: 'http', component: HttpComponent},
   {path: 'crud', component: CrudComponent},
   {path: 'auth', component: AuthenticationComponent},
+  {path: 'secret', component: SecretComponent, canActivate: [UserGuard]},
   {path: 'acceuil', redirectTo: 'accueil'},
   {path: '', redirectTo: '/accueil', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},

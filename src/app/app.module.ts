@@ -24,6 +24,7 @@ import { CrudComponent } from './pages/crud/crud.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
+import { SecretComponent } from './pages/secret/secret.component';
 
 registerLocaleData(localeFr);
 
@@ -46,7 +47,8 @@ registerLocaleData(localeFr);
     CrudComponent,
     PostCardComponent,
     PostFormComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    SecretComponent
   ],
   imports: [
     BrowserModule,
