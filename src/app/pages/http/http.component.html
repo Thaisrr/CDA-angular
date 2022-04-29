@@ -1,0 +1,10 @@
+<main>
+  <p *ngIf="is_loading; else data">Chargement...</p>
+  <ng-template #data>
+    <p *ngIf="joke; else error">{{joke}}</p>
+    <ng-template #error>
+      oups
+    </ng-template>
+  </ng-template>
+
+</main>

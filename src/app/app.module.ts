@@ -18,6 +18,8 @@ import { FormulairesComponent } from './pages/formulaires/formulaires.component'
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FormulairesReactiveComponent } from './pages/formulaires-reactive/formulaires-reactive.component';
 import { ObservableComponent } from './pages/observable/observable.component';
+import { HttpComponent } from './pages/http/http.component';
+import {HttpClientModule} from "@angular/common/http";
 
 registerLocaleData(localeFr);
 
@@ -35,13 +37,15 @@ registerLocaleData(localeFr);
     RainbowPipe,
     FormulairesComponent,
     FormulairesReactiveComponent,
-    ObservableComponent
+    ObservableComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'fr-FR'}],
   bootstrap: [AppComponent]

@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nom": "Toto"
+    },
+    {
+      "id": 2,
+      "nom": "Titi"
+    },
+    {
+      "email": "toto@mail.fr",
+      "password": "$2a$10$jOuLe5BBx31ermKgzmCIeeL7jiVs5SLDKv3QERgqgp6nSpsHRKPhu",
+      "id": 3
+    }
+  ],
+  "bidules": []
+}
